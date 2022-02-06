@@ -163,8 +163,8 @@ bool get_feedback(string guess) {
                 if(!(find(known_chars.begin(), known_chars.end(), guess[i]) != known_chars.end()) && !(find(known_pos, known_pos + 5, guess[i]) != known_pos + 5)) known_chars.emplace_back(guess[i]);
                 break;
             case '2':
-                if((find(disallowed.begin(), disallowed.end(), guess[i]) == disallowed.end())) disallowed.emplace_back(guess[i]);
-                remove(known_chars.begin(), known_chars.end(), guess[i]);
+                //if((find(disallowed.begin(), disallowed.end(), guess[i]) == disallowed.end())) disallowed.emplace_back(guess[i]);
+                //remove(known_chars.begin(), known_chars.end(), guess[i]);
                 known_pos[i] = guess[i];
                 break;
         }
