@@ -133,7 +133,7 @@ regex create_regex(int num_guesses) {
         }
         vector<char> temp_disallowed;
         for(int j = 0; j < num_guesses; ++j) {
-            if((find(known_chars.begin(), known_chars.end(), guesses[j][i]) != known_chars.end())) temp_disallowed.emplace_back(guesses[j][i]);
+            if(find(known_chars.begin(), known_chars.end(), guesses[j][i]) != known_chars.end()) temp_disallowed.emplace_back(guesses[j][i]);
         }
         string c = "[^";
         for(vector<char>::iterator p = disallowed.begin(); p < disallowed.end(); ++p) c += *p;
